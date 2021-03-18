@@ -1,10 +1,12 @@
-let a = 0
 let b = 0
+let a = 0
 input.onButtonPressed(Button.A, function () {
-    a = 0
-    b = 0
-    for (let index = 0; index <= 4; index++) {
-        led.plot(a, b)
+    for (let a = 0; a <= 9; a++) {
+        b = a - 1
+        for (let index = 0; index <= 4; index++) {
+            led.toggle(b - index, index)
+        }
+        basic.pause(100)
     }
 })
 input.onButtonPressed(Button.AB, function () {
