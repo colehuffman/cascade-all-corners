@@ -10,15 +10,8 @@ input.onButtonPressed(Button.A, function () {
             basic.pause(100)
         }
     }
-    for (let index = 0; index < 2; index++) {
-        for (let a = 0; a <= 9; a++) {
-            b = a - 4
-            for (let index = 0; index <= 4; index++) {
-                led.toggle(index, index - b)
-            }
-            basic.pause(100)
-        }
-    }
+})
+input.onButtonPressed(Button.AB, function () {
     for (let index = 0; index < 2; index++) {
         for (let a = 0; a <= 9; a++) {
             b = a - 4
@@ -29,6 +22,19 @@ input.onButtonPressed(Button.A, function () {
             basic.pause(100)
         }
     }
+})
+input.onButtonPressed(Button.B, function () {
+    for (let index = 0; index < 2; index++) {
+        for (let a = 0; a <= 9; a++) {
+            b = a - 4
+            for (let index = 0; index <= 4; index++) {
+                led.toggle(index, index - b)
+            }
+            basic.pause(100)
+        }
+    }
+})
+input.onGesture(Gesture.Shake, function () {
     for (let index = 0; index < 2; index++) {
         for (let a = 0; a <= 9; a++) {
             b = a - 4
@@ -38,15 +44,4 @@ input.onButtonPressed(Button.A, function () {
             basic.pause(100)
         }
     }
-    for (let index = 0; index < 2; index++) {
-        for (let a = 0; a <= 4; a++) {
-            for (let b = 0; b <= 4; b++) {
-                led.toggle(a, b)
-            }
-            basic.pause(100)
-        }
-    }
-})
-input.onButtonPressed(Button.B, function () {
-	
 })
